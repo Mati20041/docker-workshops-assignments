@@ -1,10 +1,12 @@
 version: '3.1'
 
-#Write rest of yaml - add image, ports, needed environments, volumes and etc.
+#Write rest of the compose file.
+#You have to build an image with application, connect it to db and publish port 8080
 
 services:
-  drupal:
-
-  postgres:
+  notes-service:
+    depends_on:
+      - db
+  db:
 
 volumes:
