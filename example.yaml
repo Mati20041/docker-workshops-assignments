@@ -11,7 +11,7 @@ services:
     networks:
       - 'dbnetwork'
     labels:
-      version: 10
+      version: '10'
       creation-date: today
       # source of good labels http://label-schema.org/rc1/
     #command: if you want to change default command
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: Dockerfile 
       args:
-        version: 5
+        version: '5'
     ports:
       - '8080:8080'
     networks:
