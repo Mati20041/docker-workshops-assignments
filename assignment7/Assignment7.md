@@ -12,4 +12,5 @@
    1. Use entrypoint with exec notation for running application
    2. Application starts with `camel-migration-1.0.0-SNAPSHOT/bin/camel-migration`
    3. Takes 3 parameters - from broker address, to broker address, queue name
+   4. Brokers address is tcp protocol (tcp://) and 61616 port
 5. Run dockered application that will move all messages from given queue names
