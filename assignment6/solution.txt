@@ -1,0 +1,1 @@
+docker image build . --build-arg mq_version=5.15.0 --build-arg mq_url=https://archive.apache.org/dist/activemq/5.15.0/apache-activemq-5.15.0-bin.tar.gz -t activemq:5.15

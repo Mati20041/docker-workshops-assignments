@@ -1,0 +1,5 @@
+docker container run -p 8080:80 -d nginx
+docker container exec -i -t <name> bash
+    apt-get update
+    apt-get install nano
+    nano /usr/share/nginx/html/index.html
