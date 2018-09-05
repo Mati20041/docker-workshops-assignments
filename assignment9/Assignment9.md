@@ -1,13 +1,15 @@
 # 9. Simple spring-boot application
 
 
-1. Get application and compile it [https://github.com/Mati20041/notes-service](https://github.com/Mati20041/notes-service)
-   1. `./gradlew clean assemble`
+1. There is notes-service.jar with spring boot application
 2. Write Dockerfile to dockerize it
-   1. Provide custom (might be empty for now) application.yml to image
+   1. Add application.properties  with db configuration to image
 3. Write `docker-compose.yml` that will prepare image and also run postgres
-   1. Set properties in provided `application.yml` to connect application to postgres
-   2. Use `POSTGRES_D`B env
-4. Give it a try!
-   1. Spoiler alert: it will crash
-5. Add `wait-for-it.sh` to image!
+   1. Configure postgres as in `application.properties`
+   2. Database host - service name
+   3. Database name - env `POSTGRES_DB`
+   4. Database user - env `POSTGRES_USER`
+   5. Database password - `env POSTGRES_PASSWORD`
+4. Add wait-for-it.sh to an image to wait for postgres to start!
+   1. Ex. call `./wait-for-it.sh db:5432 -- java -jar app.jar`
+5. Give it a try!
