@@ -13,6 +13,11 @@ services:
     labels:
       version: '10'
       creation-date: today
+    healthcheck:
+      test: ["CMD", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
       # source of good labels http://label-schema.org/rc1/
     #command: if you want to change default command
   website:
