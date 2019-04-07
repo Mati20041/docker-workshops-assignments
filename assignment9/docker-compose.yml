@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2.4'
 
 #Write rest of the compose file.
 #You have to build an image with application, connect it to db and publish port 8080
@@ -6,7 +6,8 @@ version: '3.1'
 services:
   notes-service:
     depends_on:
-      - db
+    #fill here
   db:
-
+    #fill here
 volumes:
+  #fill here
