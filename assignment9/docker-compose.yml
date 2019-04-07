@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2.4'
 
 #Write rest of the compose file.
 #You have to build an image with application, connect it to db and publish port 8080
@@ -8,19 +8,16 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    command: ["./wait-for-it.sh", "db:5432", "--", "java", "-jar", "notes-service-0.0.1-SNAPSHOT.jar"]
-    ports: 
+    ports:
       - 8080:8080
     depends_on:
-      - db
+      db:
+        condition: service_healthy
   db:
     image: postgres
-    environment: 
+    environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=example
       - POSTGRES_DB=notes
     volumes:
       - pgdata:/var/lib/postgresql/data
-
-volumes:
-  pgdata:

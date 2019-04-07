@@ -10,6 +10,5 @@
    3. Database name - env `POSTGRES_DB`
    4. Database user - env `POSTGRES_USER`
    5. Database password - `env POSTGRES_PASSWORD`
-4. Add wait-for-it.sh to an image to wait for postgres to start!
-   1. Ex. call `./wait-for-it.sh db:5432 -- java -jar app.jar`
+4. Set notes-service to wait for db
 5. Give it a try!

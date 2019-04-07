@@ -8,4 +8,4 @@
    2. One for postgres data
 3. Run `docker-compose up`
 4. Configure drupal and check it out!
-   1. In advanced settings during db configuration set host same as name of postgres service
+   1. In advanced settings during db configuration set host same as the name of postgres service
