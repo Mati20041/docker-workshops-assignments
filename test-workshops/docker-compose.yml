@@ -1,0 +1,8 @@
+services:
+  test:
+    image: docker-workshops-test:latest
+    build:
+      context: .
+      dockerfile: Dockerfile2
+    volumes:
+      - ./script.sh:/testing/script.sh

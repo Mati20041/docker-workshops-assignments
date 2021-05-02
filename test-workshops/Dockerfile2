@@ -1,0 +1,4 @@
+FROM ubuntu
+RUN apt update && apt install wget -y
+WORKDIR /testing
+CMD ./script.sh
