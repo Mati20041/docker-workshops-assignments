@@ -1,5 +1,3 @@
-version: '2.4'
-
 #Write rest of the compose file.
 #You have to build an image with application, connect it to db and publish port 8080
 

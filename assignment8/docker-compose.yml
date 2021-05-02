@@ -1,6 +1,4 @@
-version: '2.4'
-
-#Write rest of yaml - add image, ports, needed environments, volumes and etc.
+#Write the rest of yaml configuration - add image, ports, needed environments, volumes and etc.
 
 services:
   drupal:
