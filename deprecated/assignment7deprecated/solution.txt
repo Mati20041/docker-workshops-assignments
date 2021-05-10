@@ -1,0 +1,6 @@
+docker network create a6
+docker container run -d --network a6 -p 8161:8161 --name amq1 mati20041/activemq:5.8
+docker container run -d --network a6 -p 8162:8161 --name amq2 mati20041/activemq:5.14
+
+docker image build . -t test
+docker container run --network a6 test tcp://amq1:61616 tcp://amq2:61616 test

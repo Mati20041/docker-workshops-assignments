@@ -1,0 +1,2 @@
+docker image build . -t test
+docker container run -v $(pwd)/Trello-Card-Printer:/workspace -p 80:9090 test
