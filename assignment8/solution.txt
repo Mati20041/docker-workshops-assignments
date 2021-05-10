@@ -1,0 +1,14 @@
+
+docker-compose up
+
+// stop + start again / stop could be ctrl+c
+
+docker-compose down
+docker-compose up
+
+// stop with removing volumes
+
+docker-compose down -v
+docker-compose up
+
+
