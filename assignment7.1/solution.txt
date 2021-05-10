@@ -1,6 +1,6 @@
 docker container run --rm --network a7 --name aws -e HOSTNAME_EXTERNAL=aws -p 4566:4566 mati20041/localstack
 
-docker image build . -t assignment5
+docker image build . -t assignment7
 
-docker container run --rm --network a7 assignment5 listener http://aws:4566
-docker container run --rm --network a7 assignment5 scheduler http://aws:4566
+docker container run --rm --network a7 assignment7 listener http://aws:4566
+docker container run --rm --network a7 assignment7 scheduler http://aws:4566
